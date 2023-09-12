@@ -1,0 +1,31 @@
+{
+  "name": "tiagoramos/php",
+  "description": "Exemplos de utilização do componente DataLayer",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Tiago Pereira Ramos",
+      "email": "falecom@tiagoramos.com.br",
+      "homepage": "https://www.tiagoramos.com.br",
+      "role": "Developer/Education"
+    }
+  ],
+  "config": {
+    "vendor-dir": "vendor"
+  },
+  "autoload": {
+    "psr-4": {
+      "Source\\": "source/"
+    },
+    "files": [
+      "source/Boot/Config.php"
+    ]
+  },
+  "require": {
+    "php": "^8.0",
+    "ext-pdo": "^8.0",
+    "league/plates": "3.4.0",
+    "coffeecode/router": "2.0.*",
+    "coffeecode/datalayer" : " 2.0.*"
+  }
+}
