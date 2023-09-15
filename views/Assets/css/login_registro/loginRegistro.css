@@ -44,12 +44,12 @@ body {
 }
 
 .cardlogin {
-    width: 60%;
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 30px 35px;
+    padding: 20px 25px;
     background: #f1f1f1;
     border-radius: 20px;
     box-shadow: 0px 0px 45px 15px #576975;

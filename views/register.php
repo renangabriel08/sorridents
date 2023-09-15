@@ -24,6 +24,7 @@
         $convenio = $_POST['convenio'];
         $conv_numero = $_POST['conv_numero'];
         $complemento = $_POST['complemento'];
+        $celular = $_POST['celular'];
       
         //Enviando dados para o construtor
         $user = new User();
@@ -44,6 +45,8 @@
         $user->convenio = $convenio;
         $user->conv_numero = $conv_numero;
         $user->complemento = $complemento;
+
+        $user->celular = $celular;
 
         //usa metodo save para salvar esse usuário no banco de dados
         $user->save();
@@ -137,13 +140,17 @@
                 </div>
             </div>
             <div class="end" style="display: flex; gap: 10px; width: 100%;">
-                <div class="textfield" style="width: 50%;">
+                <div class="textfield" style="width: 33%;">
                     <label for="rg">Rg</label>
                     <input type="number" name="rg" placeholder="00.000.000-0" id="">
                 </div>
-                <div class="textfield" style="width: 50%;">
+                <div class="textfield" style="width: 33%;">
                     <label for="cpf">CPF</label>
                     <input type="number" name="cpf" placeholder="000.000.000-00" id="">
+                </div>
+                <div class="textfield" style="width: 33%;">
+                    <label for="celular">Celular</label>
+                    <input type="number" name="celular" placeholder="14999999999" id="" maxlength="11" minlength="11" required>
                 </div>
             </div>
             <div class="textfield">
