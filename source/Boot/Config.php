@@ -3,7 +3,7 @@
 //Configurações do banco de dados
 define("DATA_LAYER_CONFIG", [
     "driver" => "mysql",
-    "host" => "10.91.228.12",
+    "host" => "localhost",
     "port" => "3306",
     "dbname" => "sorridents",
     "username" => "root",
@@ -17,7 +17,7 @@ define("DATA_LAYER_CONFIG", [
 ]);
 
 //URLs
-define('CONF_URL_BASE','localhost/sorridents');
+define('CONF_URL_BASE','http://localhost/sorridents');
 define('CONF_VIEW_PATH',__DIR__.'/../../views/');
 define('CONF_VIEW_EXT','php');
 
