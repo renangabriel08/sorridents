@@ -109,9 +109,12 @@ input:-webkit-autofill {
 
 /*CONTAINER*/
 .content,
-.container {
+.containerAgenda,
+.containerRegitrarAgenda {
     max-width: 90%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .content {
@@ -147,28 +150,61 @@ input:-webkit-autofill {
     text-align: right;
 }
 
-/*GRADIENTS*/
-.gradient {
-    background-size: 200% auto;
-    transition-duration: 0.5s;
+.cardAgenda {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 25px;
+    background: #f1f1f1;
+    border-radius: 20px;
+    box-shadow: 0px 0px 45px 15px #576975;
 }
 
-.gradient-green {
-    background-image: var(--gradient-green);
+.textfield label {
+    width: 100%;
 }
 
-.gradient-blue {
-    background-image: var(--gradient-blue);
+.btn-agenda,
+.btn-agenda-delete {
+    height: 40px;
+    width: 100%;
+    border: 2px solid #576975;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #576975;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #f1f1f1;
 }
 
-.gradient-yellow {
-    background-image: var(--gradient-yellow);
+.auth_header {
+    text-align: center;
 }
 
-.gradient-red {
-    background-image: var(--gradient-red);
+.containerRegitrarAgenda {
+    align-items: center;
+    justify-content: space-around;
+    height: 90vh;
 }
 
-.gradient-hover:hover {
-    background-position: right center;
+.headerDelete,
+.appBoxDelete {
+    width: 100%;
+    justify-content: space-around;
+}
+
+.formDelete {
+    display: flex;
+    width: 100%;
+    padding-top: 15px;
+    justify-content: space-between;
+}
+
+.btn-agenda-delete {
+    width: 45%;
 }

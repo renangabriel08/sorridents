@@ -2,23 +2,13 @@ const pacienteInput = document.querySelector("#paciente");
 const pacienteIdInput = document.querySelector("#id");
 const convenioInput = document.querySelector("#convenio");
 
-// Validate CEP Input
-pacienteInput.addEventListener("keypress", (e) => {
-    const onlyLetters = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/;
-    const key = String.fromCharCode(e.keyCode);
-
-    // allow only numbers
-    if (!onlyLetters.test(key)) {
-        e.preventDefault();
-        return;
-    }
-});
 
 // Evento to get address
 pacienteInput.addEventListener("keyup", (e) => {
+
     const inputValue = e.target.value;
     //   Check if we have a CEP
-    if (inputValue.length === 3 || inputValue.length > 3) {
+    if (inputValue.length === 2 || inputValue.length > 3) {
         getDados(inputValue);
     }
     if (inputValue.length === 0) {

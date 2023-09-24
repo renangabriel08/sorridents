@@ -23,7 +23,7 @@ function formata_celular($number){
     return $number;
 }
 
-public function date_fmt_back(?string $date): ?string
+function date_fmt_back(?string $date): ?string
 {
     if (!$date) {
         return null;

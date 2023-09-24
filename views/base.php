@@ -28,4 +28,5 @@
 </body>
 <script src="/sorridents/views/assets/js/cadastro.js"></script>
 <script src="/sorridents/views/assets/js/calendario.js"></script>
+<script src="/sorridents/views/assets/js/paciente.js"></script>
 </html>

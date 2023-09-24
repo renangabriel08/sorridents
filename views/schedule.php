@@ -22,7 +22,7 @@
     }
     $contagemConsultasAgendadas = 0;
 ?>
-<div class="container content">
+<div class="containerAgenda content">
 <div class="app_launch_header">
     <form class="app_launch_form_filter app_form" action="<?=CONF_URL_BASE?>/agenda" method="post">
 

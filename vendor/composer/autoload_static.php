@@ -8,12 +8,17 @@ class ComposerStaticInit0f72b4c2724853fa088a646c946896fd
 {
     public static $files = array (
         'a59ffdfc51b806aa99f5e0ce954bfd30' => __DIR__ . '/../..' . '/source/Boot/Config.php',
+        'd068a14bd83bf5c77d154cc0d011f423' => __DIR__ . '/../..' . '/source/Boot/Helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         'S' => 
         array (
             'Source\\' => 7,
+        ),
+        'P' => 
+        array (
+            'PHPMailer\\PHPMailer\\' => 20,
         ),
         'L' => 
         array (
@@ -30,6 +35,10 @@ class ComposerStaticInit0f72b4c2724853fa088a646c946896fd
         'Source\\' => 
         array (
             0 => __DIR__ . '/../..' . '/source',
+        ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
         'League\\Plates\\' => 
         array (
