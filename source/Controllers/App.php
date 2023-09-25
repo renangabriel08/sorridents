@@ -91,7 +91,6 @@ class App extends Controller
 
         if(isset($form["agendar"])){
             $objAgendamento = new Schedule();
-            var_dump($form['data']);
             $dia = date_fmt_back($form['data']);
             $dia = date('Y-m-d',strtotime($dia));
             $objAgendamento->dia = $form['data'];

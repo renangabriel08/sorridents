@@ -75,10 +75,20 @@ class Web extends Controller
     //Esqueci Senha
     public function forget()
     {
+        $msg = "";
+
+        if(!empty($form))
+        {
+            if(empty($form['email']) || empty($form['cpf']) || empty($form['senha'])){
+                $msg = "Preencha todos os campos obrigatórios.";
+            }
+        }
+
         $data = [
-            'title'=> "Esqueci senha - ". CONF_SITE_NAME,
+            'title'=> "Home - ". CONF_SITE_NAME,
             'description'=> CONF_SITE_DESC,
-            'url'=> "/esqueci-senha"
+            'url'=> "/esqueci-senha",
+            'msg'=> $msg
         ];
         echo $this->objView->render('forget', ["data"=> $data]);
     }

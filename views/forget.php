@@ -1,5 +1,34 @@
-<?=
+<?php
     $this->layout('base', $data);
+
+    use Source\Models\User;
+
+    $msg = $data['msg'];
+
+    if(isset($_POST['btn']) && empty($msg)){
+
+        if(empty($_POST['email']) || empty($_POST['cpf']) || empty($_POST['senha'])) {
+            $msg = 'Preencha todos os dados';
+        } else {
+            //Dados do usuário
+            $cpf = $_POST['cpf'];
+            $email = $_POST['email'];
+            $senha = $_POST['senha'];
+        
+            //Enviando dados para o construtor
+            $model = new User();
+            $user = $model->find("email = :email AND cpf = :cpf", "email={$email}&cpf={$cpf}")->fetch();
+
+            if($user != null) {
+                $user->senha = password_hash($senha,CONF_PASSWD_ALGO, CONF_PASSWD_OPTION);
+                $user->save();
+                $msg = 'Senha alterada com sucesso!';
+            } else {
+                $msg = 'Usuário não encontrado';
+            }
+        }
+    }
+
 ?>
 
 <div class="mainlogin">
@@ -13,17 +42,22 @@
             <br>
             <div class="textfield">
                 <label for="email">Informe seu e-mail</label>
-                <input type="text" name="email" id="">
+                <input type="text" name="email" id="" required>
+            </div>
+            <div class="textfield">
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" id="" required>
             </div>
             <div class="textfield">
                 <label for="senha">Crie uma nova senha</label>
-                <input type="text" name="senha" id="">
+                <input type="text" name="senha" id="" required>
             </div>
             <br>
             <div class="cardbuttons">
                 <input type="submit" class="btn-login" name="btn" value="Redefinir">
                 <button class="btn-login"><a href="/sorridents"></a>Voltar</button>
             </div>
+            <?=$msg?>
         </form>
     </div>
 </div>
