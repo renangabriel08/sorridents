@@ -3,7 +3,7 @@
         'name' => 'tiagoramos/php',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '743e952edc802afb1615c28e30fb683c974f05b0',
+        'reference' => 'ff7d6373a51bd7369608ec01b81053a2ffa7dbd0',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -49,7 +49,7 @@
         'tiagoramos/php' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '743e952edc802afb1615c28e30fb683c974f05b0',
+            'reference' => 'ff7d6373a51bd7369608ec01b81053a2ffa7dbd0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
