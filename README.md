@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <img width="60%" src="./github/sorridents.gif">
+  <img width="100%" src="./github/sorridents.gif">
 </p>
 
 <div id='projeto'>
