@@ -42,20 +42,20 @@
             <br>
             <div class="textfield">
                 <label for="email">Informe seu e-mail</label>
-                <input type="text" name="email" id="" required>
+                <input type="text" name="email" id="">
             </div>
             <div class="textfield">
                 <label for="cpf">CPF</label>
-                <input type="text" name="cpf" id="" required>
+                <input type="text" name="cpf" id="">
             </div>
             <div class="textfield">
                 <label for="senha">Crie uma nova senha</label>
-                <input type="text" name="senha" id="" required>
+                <input type="text" name="senha" id="">
             </div>
             <br>
             <div class="cardbuttons">
                 <input type="submit" class="btn-login" name="btn" value="Redefinir">
-                <button class="btn-login"><a href="/sorridents"></a>Voltar</button>
+                <button class="btn-login"><a href="/sorridents/"></a>Voltar</button>
             </div>
             <?=$msg?>
         </form>
